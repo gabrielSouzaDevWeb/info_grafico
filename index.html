@@ -1,0 +1,744 @@
+<html lang="pt-BR"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infográfico: Tipos de Memória em Computadores</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+        }
+        
+        .memory-card {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .memory-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .tab-button {
+            transition: all 0.3s ease;
+        }
+        
+        .tab-button.active {
+            background-color: #4338ca;
+            color: white;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .speed-bar {
+            height: 24px;
+            border-radius: 12px;
+            transition: width 1s ease-in-out;
+        }
+        
+        .comparison-item {
+            transition: all 0.3s ease;
+        }
+        
+        .comparison-item:hover {
+            background-color: #e0e7ff;
+        }
+        
+        .icon-container {
+            transition: all 0.3s ease;
+        }
+        
+        .icon-container:hover {
+            transform: scale(1.1);
+        }
+    </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.16 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.container{width:100%}@media (min-width: 640px){.container{max-width:640px}}@media (min-width: 768px){.container{max-width:768px}}@media (min-width: 1024px){.container{max-width:1024px}}@media (min-width: 1280px){.container{max-width:1280px}}@media (min-width: 1536px){.container{max-width:1536px}}.relative{position:relative}.mx-auto{margin-left:auto;margin-right:auto}.mb-1{margin-bottom:0.25rem}.mb-10{margin-bottom:2.5rem}.mb-16{margin-bottom:4rem}.mb-2{margin-bottom:0.5rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.mr-1{margin-right:0.25rem}.mr-2{margin-right:0.5rem}.mr-4{margin-right:1rem}.mt-1{margin-top:0.25rem}.mt-10{margin-top:2.5rem}.mt-16{margin-top:4rem}.mt-2{margin-top:0.5rem}.mt-4{margin-top:1rem}.mt-6{margin-top:1.5rem}.mt-8{margin-top:2rem}.inline-block{display:inline-block}.flex{display:flex}.grid{display:grid}.h-14{height:3.5rem}.h-2\.5{height:0.625rem}.h-24{height:6rem}.h-4{height:1rem}.h-5{height:1.25rem}.h-8{height:2rem}.h-full{height:100%}.w-1\/2{width:50%}.w-14{width:3.5rem}.w-24{width:6rem}.w-5{width:1.25rem}.w-8{width:2rem}.w-full{width:100%}.max-w-3xl{max-width:48rem}.max-w-6xl{max-width:72rem}.cursor-pointer{cursor:pointer}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-2{gap:0.5rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.space-y-1 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.25rem * var(--tw-space-y-reverse))}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.bg-amber-100{--tw-bg-opacity:1;background-color:rgb(254 243 199 / var(--tw-bg-opacity, 1))}.bg-amber-500{--tw-bg-opacity:1;background-color:rgb(245 158 11 / var(--tw-bg-opacity, 1))}.bg-blue-100{--tw-bg-opacity:1;background-color:rgb(219 234 254 / var(--tw-bg-opacity, 1))}.bg-blue-200{--tw-bg-opacity:1;background-color:rgb(191 219 254 / var(--tw-bg-opacity, 1))}.bg-blue-50{--tw-bg-opacity:1;background-color:rgb(239 246 255 / var(--tw-bg-opacity, 1))}.bg-blue-500{--tw-bg-opacity:1;background-color:rgb(59 130 246 / var(--tw-bg-opacity, 1))}.bg-gray-100{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1))}.bg-gray-200{--tw-bg-opacity:1;background-color:rgb(229 231 235 / var(--tw-bg-opacity, 1))}.bg-green-100{--tw-bg-opacity:1;background-color:rgb(220 252 231 / var(--tw-bg-opacity, 1))}.bg-green-200{--tw-bg-opacity:1;background-color:rgb(187 247 208 / var(--tw-bg-opacity, 1))}.bg-green-50{--tw-bg-opacity:1;background-color:rgb(240 253 244 / var(--tw-bg-opacity, 1))}.bg-indigo-100{--tw-bg-opacity:1;background-color:rgb(224 231 255 / var(--tw-bg-opacity, 1))}.bg-indigo-500{--tw-bg-opacity:1;background-color:rgb(99 102 241 / var(--tw-bg-opacity, 1))}.bg-purple-100{--tw-bg-opacity:1;background-color:rgb(243 232 255 / var(--tw-bg-opacity, 1))}.bg-purple-200{--tw-bg-opacity:1;background-color:rgb(233 213 255 / var(--tw-bg-opacity, 1))}.bg-purple-500{--tw-bg-opacity:1;background-color:rgb(168 85 247 / var(--tw-bg-opacity, 1))}.bg-teal-100{--tw-bg-opacity:1;background-color:rgb(204 251 241 / var(--tw-bg-opacity, 1))}.bg-teal-500{--tw-bg-opacity:1;background-color:rgb(20 184 166 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-gradient-to-br{background-image:linear-gradient(to bottom right, var(--tw-gradient-stops))}.from-blue-50{--tw-gradient-from:#eff6ff var(--tw-gradient-from-position);--tw-gradient-to:rgb(239 246 255 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-purple-50{--tw-gradient-from:#faf5ff var(--tw-gradient-from-position);--tw-gradient-to:rgb(250 245 255 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.to-blue-100{--tw-gradient-to:#dbeafe var(--tw-gradient-to-position)}.to-purple-100{--tw-gradient-to:#f3e8ff var(--tw-gradient-to-position)}.p-3{padding:0.75rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.px-4{padding-left:1rem;padding-right:1rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-8{padding-top:2rem;padding-bottom:2rem}.pb-8{padding-bottom:2rem}.text-center{text-align:center}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-semibold{font-weight:600}.text-amber-500{--tw-text-opacity:1;color:rgb(245 158 11 / var(--tw-text-opacity, 1))}.text-amber-700{--tw-text-opacity:1;color:rgb(180 83 9 / var(--tw-text-opacity, 1))}.text-blue-500{--tw-text-opacity:1;color:rgb(59 130 246 / var(--tw-text-opacity, 1))}.text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235 / var(--tw-text-opacity, 1))}.text-blue-700{--tw-text-opacity:1;color:rgb(29 78 216 / var(--tw-text-opacity, 1))}.text-blue-800{--tw-text-opacity:1;color:rgb(30 64 175 / var(--tw-text-opacity, 1))}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity, 1))}.text-green-500{--tw-text-opacity:1;color:rgb(34 197 94 / var(--tw-text-opacity, 1))}.text-green-600{--tw-text-opacity:1;color:rgb(22 163 74 / var(--tw-text-opacity, 1))}.text-green-700{--tw-text-opacity:1;color:rgb(21 128 61 / var(--tw-text-opacity, 1))}.text-green-800{--tw-text-opacity:1;color:rgb(22 101 52 / var(--tw-text-opacity, 1))}.text-indigo-600{--tw-text-opacity:1;color:rgb(79 70 229 / var(--tw-text-opacity, 1))}.text-indigo-700{--tw-text-opacity:1;color:rgb(67 56 202 / var(--tw-text-opacity, 1))}.text-indigo-800{--tw-text-opacity:1;color:rgb(55 48 163 / var(--tw-text-opacity, 1))}.text-purple-500{--tw-text-opacity:1;color:rgb(168 85 247 / var(--tw-text-opacity, 1))}.text-purple-700{--tw-text-opacity:1;color:rgb(126 34 206 / var(--tw-text-opacity, 1))}.text-purple-800{--tw-text-opacity:1;color:rgb(107 33 168 / var(--tw-text-opacity, 1))}.text-red-500{--tw-text-opacity:1;color:rgb(239 68 68 / var(--tw-text-opacity, 1))}.text-teal-500{--tw-text-opacity:1;color:rgb(20 184 166 / var(--tw-text-opacity, 1))}.text-teal-700{--tw-text-opacity:1;color:rgb(15 118 110 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.shadow{--tw-shadow:0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}@media (min-width: 768px){.md\:w-1\/2{width:50%}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.md\:flex-row{flex-direction:row}}</style><style id="_goober"> .go1475592160{height:0;}.go1671063245{height:auto;}.go1888806478{display:flex;flex-wrap:wrap;flex-grow:1;}@media (min-width:600px){.go1888806478{flex-grow:initial;min-width:288px;}}.go167266335{background-color:#313131;font-size:0.875rem;line-height:1.43;letter-spacing:0.01071em;color:#fff;align-items:center;padding:6px 16px;border-radius:4px;box-shadow:0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12);}.go3162094071{padding-left:20px;}.go3844575157{background-color:#313131;}.go1725278324{background-color:#43a047;}.go3651055292{background-color:#d32f2f;}.go4215275574{background-color:#ff9800;}.go1930647212{background-color:#2196f3;}.go946087465{display:flex;align-items:center;padding:8px 0;}.go703367398{display:flex;align-items:center;margin-left:auto;padding-left:16px;margin-right:-8px;}.go3963613292{width:100%;position:relative;transform:translateX(0);top:0;right:0;bottom:0;left:0;min-width:288px;}.go1141946668{box-sizing:border-box;display:flex;max-height:100%;position:fixed;z-index:1400;height:auto;width:auto;transition:top 300ms ease 0ms,right 300ms ease 0ms,bottom 300ms ease 0ms,left 300ms ease 0ms,max-width 300ms ease 0ms;pointer-events:none;max-width:calc(100% - 40px);}.go1141946668 .notistack-CollapseWrapper{padding:6px 0px;transition:padding 300ms ease 0ms;}@media (max-width:599.95px){.go1141946668{width:100%;max-width:calc(100% - 32px);}}.go3868796639 .notistack-CollapseWrapper{padding:2px 0px;}.go3118922589{top:14px;flex-direction:column;}.go1453831412{bottom:14px;flex-direction:column-reverse;}.go4027089540{left:20px;}@media (min-width:600px){.go4027089540{align-items:flex-start;}}@media (max-width:599.95px){.go4027089540{left:16px;}}.go2989568495{right:20px;}@media (min-width:600px){.go2989568495{align-items:flex-end;}}@media (max-width:599.95px){.go2989568495{right:16px;}}.go4034260886{left:50%;transform:translateX(-50%);}@media (min-width:600px){.go4034260886{align-items:center;}}</style></head>
+<body>
+    <div class="container mx-auto px-4 py-8 max-w-6xl">
+        <header class="text-center mb-10">
+            <h1 class="text-4xl font-bold text-indigo-800 mb-4">Tipos de Memória em Computadores</h1>
+            <div class="bg-indigo-100 p-4 rounded-lg inline-block">
+                <h2 class="text-xl text-indigo-700">Trabalho realizado por:</h2>
+                <div class="flex flex-wrap justify-center gap-2 mt-2">
+                    <div class="bg-white px-4 py-2 rounded-full shadow text-indigo-600 font-medium">Nome do Aluno 1</div>
+                    <div class="bg-white px-4 py-2 rounded-full shadow text-indigo-600 font-medium">Nome do Aluno 2</div>
+                    <div class="bg-white px-4 py-2 rounded-full shadow text-indigo-600 font-medium">Nome do Aluno 3</div>
+                    <div class="bg-white px-4 py-2 rounded-full shadow text-indigo-600 font-medium">Nome do Aluno 4</div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Seção 1: Memória Principal vs Secundária -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-indigo-700 mb-6 text-center">Memória Principal vs Memória Secundária</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Memória Principal -->
+                <div class="memory-card bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <div class="icon-container bg-blue-500 p-3 rounded-full mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-blue-700">Memória Principal</h3>
+                    </div>
+                    
+                    <ul class="space-y-3 text-blue-800">
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 mt-1 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Acesso direto pelo processador</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 mt-1 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Alta velocidade de acesso</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 mt-1 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Armazena dados e programas em execução</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 mt-1 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Volátil (perde dados quando desligada)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 mt-1 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Exemplos: RAM e ROM</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="mt-6 bg-blue-200 p-4 rounded-lg">
+                        <p class="text-blue-800 font-medium">A memória principal é essencial para o funcionamento do computador, pois armazena temporariamente os dados que estão sendo processados. É como a "mesa de trabalho" do computador.</p>
+                    </div>
+                </div>
+                
+                <!-- Memória Secundária -->
+                <div class="memory-card bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <div class="icon-container bg-purple-500 p-3 rounded-full mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-purple-700">Memória Secundária (de Massa)</h3>
+                    </div>
+                    
+                    <ul class="space-y-3 text-purple-800">
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 mt-1 text-purple-500" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Acesso indireto (através da memória principal)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 mt-1 text-purple-500" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Velocidade de acesso mais lenta</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 mt-1 text-purple-500" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Armazenamento permanente de dados</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 mt-1 text-purple-500" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Não-volátil (mantém dados quando desligada)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 mt-1 text-purple-500" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Exemplos: HDD, SSD, NVMe, pen drives</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="mt-6 bg-purple-200 p-4 rounded-lg">
+                        <p class="text-purple-800 font-medium">A memória secundária é como o "armário" do computador, onde os dados são guardados permanentemente, mesmo quando o dispositivo está desligado. Tem maior capacidade, mas é mais lenta.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 2: RAM vs ROM -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-indigo-700 mb-6 text-center">RAM vs ROM</h2>
+            <p class="text-center text-lg mb-8 max-w-3xl mx-auto">Entenda as diferenças entre as duas principais memórias primárias e como são utilizadas nos smartphones modernos.</p>
+            
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="flex flex-wrap">
+                    <div class="tab-button active w-1/2 py-4 text-center font-semibold cursor-pointer" data-tab="ram">
+                        Memória RAM
+                    </div>
+                    <div class="tab-button w-1/2 py-4 text-center font-semibold cursor-pointer" data-tab="rom">
+                        Memória ROM
+                    </div>
+                </div>
+                
+                <div class="p-6">
+                    <!-- Conteúdo RAM -->
+                    <div id="ram-content" class="tab-content active">
+                        <div class="flex flex-col md:flex-row gap-6">
+                            <div class="md:w-1/2">
+                                <h3 class="text-2xl font-bold text-green-600 mb-4">Memória RAM</h3>
+                                <p class="text-gray-700 mb-4"><span class="font-bold">Random Access Memory</span> (Memória de Acesso Aleatório)</p>
+                                
+                                <div class="bg-green-50 p-4 rounded-lg mb-6">
+                                    <h4 class="font-bold text-green-700 mb-2">Características:</h4>
+                                    <ul class="space-y-2">
+                                        <li class="flex items-start">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 mt-1 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                            </svg>
+                                            <span class="text-gray-700">Volátil (perde dados quando desligada)</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 mt-1 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                            </svg>
+                                            <span class="text-gray-700">Leitura e escrita rápidas</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 mt-1 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                            </svg>
+                                            <span class="text-gray-700">Armazena dados temporários</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 mt-1 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                            </svg>
+                                            <span class="text-gray-700">Conteúdo modificável pelo usuário</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                                <h4 class="font-bold text-green-700 mb-2">Aplicações em Smartphones:</h4>
+                                <ul class="space-y-2 mb-6">
+                                    <li class="flex items-start">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 mt-1 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span class="text-gray-700">Execução de aplicativos</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 mt-1 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span class="text-gray-700">Multitarefa (abrir vários apps simultaneamente)</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 mt-1 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span class="text-gray-700">Processamento de imagens e vídeos</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 mt-1 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span class="text-gray-700">Jogos e aplicações gráficas</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="md:w-1/2">
+                                <div class="bg-green-100 p-6 rounded-xl h-full">
+                                    <h4 class="font-bold text-green-700 mb-4">Como funciona a RAM em um smartphone:</h4>
+                                    
+                                    <div class="relative mb-6">
+                                        <svg class="w-full" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+                                            <!-- Smartphone outline -->
+                                            <rect x="100" y="20" width="200" height="400" rx="20" fill="#f0f0f0" stroke="#333" stroke-width="3"></rect>
+                                            <rect x="120" y="40" width="160" height="280" rx="5" fill="#fff" stroke="#ddd"></rect>
+                                            
+                                            <!-- RAM chip -->
+                                            <rect x="150" y="100" width="100" height="60" rx="5" fill="#4ade80" stroke="#333"></rect>
+                                            <text x="200" y="135" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">RAM</text>
+                                            
+                                            <!-- Apps -->
+                                            <rect x="140" y="200" width="40" height="40" rx="5" fill="#3b82f6" stroke="#333"></rect>
+                                            <text x="160" y="225" text-anchor="middle" font-size="10" fill="#fff">App 1</text>
+                                            
+                                            <rect x="190" y="200" width="40" height="40" rx="5" fill="#ec4899" stroke="#333"></rect>
+                                            <text x="210" y="225" text-anchor="middle" font-size="10" fill="#fff">App 2</text>
+                                            
+                                            <rect x="240" y="200" width="40" height="40" rx="5" fill="#f59e0b" stroke="#333"></rect>
+                                            <text x="260" y="225" text-anchor="middle" font-size="10" fill="#fff">App 3</text>
+                                            
+                                            <!-- Arrows -->
+                                            <path d="M160 200 L160 170" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowhead)"></path>
+                                            <path d="M210 200 L210 170" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowhead)"></path>
+                                            <path d="M260 200 L260 170" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowhead)"></path>
+                                            
+                                            <!-- Arrow marker -->
+                                            <defs>
+                                                <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                                                    <polygon points="0 0, 10 3.5, 0 7" fill="#333"></polygon>
+                                                </marker>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                    
+                                    <p class="text-green-800">Quanto mais RAM um smartphone possui, mais aplicativos podem ser mantidos em execução simultaneamente, resultando em uma experiência mais fluida ao alternar entre eles.</p>
+                                    
+                                    <div class="mt-4 p-3 bg-green-200 rounded-lg">
+                                        <p class="text-sm text-green-800 font-medium">Smartphones modernos possuem entre 4GB e 16GB de RAM, permitindo multitarefas avançadas e execução de aplicativos complexos.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Conteúdo ROM -->
+                    <div id="rom-content" class="tab-content">
+                        <div class="flex flex-col md:flex-row gap-6">
+                            <div class="md:w-1/2">
+                                <h3 class="text-2xl font-bold text-blue-600 mb-4">Memória ROM</h3>
+                                <p class="text-gray-700 mb-4"><span class="font-bold">Read-Only Memory</span> (Memória Somente de Leitura)</p>
+                                
+                                <div class="bg-blue-50 p-4 rounded-lg mb-6">
+                                    <h4 class="font-bold text-blue-700 mb-2">Características:</h4>
+                                    <ul class="space-y-2">
+                                        <li class="flex items-start">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 mt-1 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                            </svg>
+                                            <span class="text-gray-700">Não-volátil (mantém dados quando desligada)</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 mt-1 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                            </svg>
+                                            <span class="text-gray-700">Tradicionalmente somente leitura (hoje em dia pode ser modificada)</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 mt-1 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                            </svg>
+                                            <span class="text-gray-700">Armazena instruções permanentes</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 mt-1 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                            </svg>
+                                            <span class="text-gray-700">Mais lenta que a RAM, mas mais rápida que HDD/SSD</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                                <h4 class="font-bold text-blue-700 mb-2">Aplicações em Smartphones:</h4>
+                                <ul class="space-y-2 mb-6">
+                                    <li class="flex items-start">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 mt-1 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span class="text-gray-700">Armazenamento do sistema operacional</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 mt-1 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span class="text-gray-700">Firmware e bootloader</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 mt-1 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span class="text-gray-700">Armazenamento de aplicativos instalados</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 mt-1 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span class="text-gray-700">Armazenamento de fotos, vídeos e arquivos do usuário</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="md:w-1/2">
+                                <div class="bg-blue-100 p-6 rounded-xl h-full">
+                                    <h4 class="font-bold text-blue-700 mb-4">Como funciona a ROM em um smartphone:</h4>
+                                    
+                                    <div class="relative mb-6">
+                                        <svg class="w-full" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+                                            <!-- Smartphone outline -->
+                                            <rect x="100" y="20" width="200" height="400" rx="20" fill="#f0f0f0" stroke="#333" stroke-width="3"></rect>
+                                            <rect x="120" y="40" width="160" height="280" rx="5" fill="#fff" stroke="#ddd"></rect>
+                                            
+                                            <!-- ROM chip -->
+                                            <rect x="150" y="100" width="100" height="60" rx="5" fill="#3b82f6" stroke="#333"></rect>
+                                            <text x="200" y="135" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">ROM</text>
+                                            
+                                            <!-- Content -->
+                                            <rect x="140" y="200" width="40" height="40" rx="5" fill="#10b981" stroke="#333"></rect>
+                                            <text x="160" y="225" text-anchor="middle" font-size="10" fill="#fff">OS</text>
+                                            
+                                            <rect x="190" y="200" width="40" height="40" rx="5" fill="#6366f1" stroke="#333"></rect>
+                                            <text x="210" y="225" text-anchor="middle" font-size="10" fill="#fff">Apps</text>
+                                            
+                                            <rect x="240" y="200" width="40" height="40" rx="5" fill="#f97316" stroke="#333"></rect>
+                                            <text x="260" y="225" text-anchor="middle" font-size="10" fill="#fff">Dados</text>
+                                            
+                                            <!-- Arrows -->
+                                            <path d="M160 170 L160 200" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowhead2)"></path>
+                                            <path d="M210 170 L210 200" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowhead2)"></path>
+                                            <path d="M260 170 L260 200" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowhead2)"></path>
+                                            
+                                            <!-- Arrow marker -->
+                                            <defs>
+                                                <marker id="arrowhead2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                                                    <polygon points="0 0, 10 3.5, 0 7" fill="#333"></polygon>
+                                                </marker>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                    
+                                    <p class="text-blue-800">Em smartphones modernos, a "ROM" refere-se ao armazenamento interno flash, que armazena o sistema operacional, aplicativos e dados do usuário.</p>
+                                    
+                                    <div class="mt-4 p-3 bg-blue-200 rounded-lg">
+                                        <p class="text-sm text-blue-800 font-medium">Smartphones atuais possuem entre 64GB e 1TB de armazenamento interno (ROM), permitindo guardar milhares de fotos, vídeos e aplicativos.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 3: Comparação de Velocidade -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-indigo-700 mb-6 text-center">Comparação de Dispositivos de Armazenamento</h2>
+            <p class="text-center text-lg mb-8 max-w-3xl mx-auto">Entenda as diferenças de velocidade e funcionamento entre HDD, SSD SATA e NVMe.</p>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- HDD -->
+                <div class="comparison-item bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="bg-amber-500 p-4">
+                        <h3 class="text-xl font-bold text-white text-center">HDD (Magnético)</h3>
+                    </div>
+                    
+                    <div class="p-6">
+                        <div class="icon-container bg-amber-100 p-4 rounded-full w-24 h-24 mx-auto mb-4 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path>
+                            </svg>
+                        </div>
+                        
+                        <h4 class="font-bold text-amber-700 mb-2">Como funciona:</h4>
+                        <p class="text-gray-700 mb-4">Utiliza discos magnéticos giratórios (pratos) e um braço mecânico com cabeça de leitura/gravação para acessar os dados.</p>
+                        
+                        <div class="mb-6">
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium text-amber-700">Velocidade de leitura/escrita</span>
+                                <span class="text-sm font-medium text-amber-700">80-160 MB/s</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="speed-bar bg-amber-500 h-2.5 rounded-full" style="width: 20%;"></div>
+                            </div>
+                        </div>
+                        
+                        <h4 class="font-bold text-amber-700 mb-2">Vantagens:</h4>
+                        <ul class="space-y-1 mb-4">
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1 text-amber-500" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="text-sm text-gray-700">Menor custo por GB</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1 text-amber-500" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="text-sm text-gray-700">Grande capacidade de armazenamento</span>
+                            </li>
+                        </ul>
+                        
+                        <h4 class="font-bold text-amber-700 mb-2">Desvantagens:</h4>
+                        <ul class="space-y-1">
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1 text-red-500" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="text-sm text-gray-700">Mais lento</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1 text-red-500" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="text-sm text-gray-700">Suscetível a danos físicos</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1 text-red-500" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="text-sm text-gray-700">Maior consumo de energia</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- SSD SATA -->
+                <div class="comparison-item bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="bg-teal-500 p-4">
+                        <h3 class="text-xl font-bold text-white text-center">SSD SATA</h3>
+                    </div>
+                    
+                    <div class="p-6">
+                        <div class="icon-container bg-teal-100 p-4 rounded-full w-24 h-24 mx-auto mb-4 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
+                            </svg>
+                        </div>
+                        
+                        <h4 class="font-bold text-teal-700 mb-2">Como funciona:</h4>
+                        <p class="text-gray-700 mb-4">Utiliza memória flash NAND para armazenar dados, sem partes móveis. Conecta-se através da interface SATA, a mesma usada pelos HDDs.</p>
+                        
+                        <div class="mb-6">
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium text-teal-700">Velocidade de leitura/escrita</span>
+                                <span class="text-sm font-medium text-teal-700">500-550 MB/s</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="speed-bar bg-teal-500 h-2.5 rounded-full" style="width: 50%;"></div>
+                            </div>
+                        </div>
+                        
+                        <h4 class="font-bold text-teal-700 mb-2">Vantagens:</h4>
+                        <ul class="space-y-1 mb-4">
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1 text-teal-500" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="text-sm text-gray-700">5-6x mais rápido que HDD</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1 text-teal-500" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="text-sm text-gray-700">Sem partes móveis (mais durável)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1 text-teal-500" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="text-sm text-gray-700">Compatível com conexões SATA existentes</span>
+                            </li>
+                        </ul>
+                        
+                        <h4 class="font-bold text-teal-700 mb-2">Desvantagens:</h4>
+                        <ul class="space-y-1">
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1 text-red-500" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="text-sm text-gray-700">Mais caro que HDD</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1 text-red-500" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="text-sm text-gray-700">Limitado pela interface SATA (550 MB/s)</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- NVMe -->
+                <div class="comparison-item bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="bg-purple-500 p-4">
+                        <h3 class="text-xl font-bold text-white text-center">SSD NVMe</h3>
+                    </div>
+                    
+                    <div class="p-6">
+                        <div class="icon-container bg-purple-100 p-4 rounded-full w-24 h-24 mx-auto mb-4 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        
+                        <h4 class="font-bold text-purple-700 mb-2">Como funciona:</h4>
+                        <p class="text-gray-700 mb-4">Utiliza memória flash NAND, mas conecta-se diretamente às linhas PCIe do processador, eliminando gargalos de interface.</p>
+                        
+                        <div class="mb-6">
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium text-purple-700">Velocidade de leitura/escrita</span>
+                                <span class="text-sm font-medium text-purple-700">3000-7000 MB/s</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="speed-bar bg-purple-500 h-2.5 rounded-full" style="width: 100%;"></div>
+                            </div>
+                        </div>
+                        
+                        <h4 class="font-bold text-purple-700 mb-2">Vantagens:</h4>
+                        <ul class="space-y-1 mb-4">
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1 text-purple-500" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="text-sm text-gray-700">Velocidades extremamente altas</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1 text-purple-500" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="text-sm text-gray-700">Menor latência</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1 text-purple-500" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="text-sm text-gray-700">Formato compacto (M.2)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1 text-purple-500" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="text-sm text-gray-700">Ideal para cargas de trabalho intensivas</span>
+                            </li>
+                        </ul>
+                        
+                        <h4 class="font-bold text-purple-700 mb-2">Desvantagens:</h4>
+                        <ul class="space-y-1">
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1 text-red-500" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="text-sm text-gray-700">Mais caro que SSD SATA</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1 text-red-500" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path>
+                                </svg>
+                                <span class="text-sm text-gray-700">Requer placa-mãe compatível com NVMe</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Gráfico de comparação de velocidade -->
+            <div class="mt-10 bg-white p-6 rounded-xl shadow-lg">
+                <h3 class="text-2xl font-bold text-indigo-700 mb-6 text-center">Comparação de Velocidade</h3>
+                
+                <div class="space-y-6">
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span class="font-medium text-amber-700">HDD</span>
+                            <span class="font-medium text-amber-700">~150 MB/s</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-4">
+                            <div class="speed-bar bg-amber-500 h-4 rounded-full" style="width: 2%;"></div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span class="font-medium text-teal-700">SSD SATA</span>
+                            <span class="font-medium text-teal-700">~550 MB/s</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-4">
+                            <div class="speed-bar bg-teal-500 h-4 rounded-full" style="width: 8%;"></div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span class="font-medium text-purple-700">SSD NVMe (PCIe 3.0)</span>
+                            <span class="font-medium text-purple-700">~3500 MB/s</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-4">
+                            <div class="speed-bar bg-purple-500 h-4 rounded-full" style="width: 50%;"></div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span class="font-medium text-indigo-700">SSD NVMe (PCIe 4.0)</span>
+                            <span class="font-medium text-indigo-700">~7000 MB/s</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-4">
+                            <div class="speed-bar bg-indigo-500 h-4 rounded-full" style="width: 100%;"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-8 bg-gray-100 p-4 rounded-lg">
+                    <p class="text-gray-700"><span class="font-bold">Conclusão:</span> Os SSDs NVMe são significativamente mais rápidos que os SSDs SATA, que por sua vez são muito mais rápidos que os HDDs tradicionais. A escolha depende do equilíbrio entre desempenho, capacidade e custo para cada aplicação.</p>
+                </div>
+            </div>
+        </section>
+        
+        <footer class="text-center text-gray-600 mt-16 pb-8">
+            <p>© 2023 - Infográfico sobre Tipos de Memória em Computadores</p>
+            <p class="text-sm mt-2">Trabalho acadêmico realizado por: Nome do Aluno 1, Nome do Aluno 2, Nome do Aluno 3, Nome do Aluno 4</p>
+        </footer>
+    </div>
+
+    <script>
+        // Animação das barras de velocidade
+        document.addEventListener('DOMContentLoaded', function() {
+            const speedBars = document.querySelectorAll('.speed-bar');
+            
+            setTimeout(() => {
+                speedBars.forEach(bar => {
+                    const targetWidth = bar.style.width;
+                    bar.style.width = '0%';
+                    
+                    setTimeout(() => {
+                        bar.style.width = targetWidth;
+                    }, 100);
+                });
+            }, 500);
+            
+            // Funcionalidade das abas
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const tabId = button.getAttribute('data-tab');
+                    
+                    // Desativar todas as abas
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabContents.forEach(content => content.classList.remove('active'));
+                    
+                    // Ativar a aba clicada
+                    button.classList.add('active');
+                    document.getElementById(`${tabId}-content`).classList.add('active');
+                });
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'949234694239df41',t:'MTc0ODgxNzU0Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border: none; visibility: hidden;"></iframe>
+
+</body></html>
